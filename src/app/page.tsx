@@ -33,27 +33,27 @@ const roadmap = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <header className="relative isolate overflow-hidden bg-gradient-to-br from-yellow-500/15 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-[#120806] text-slate-100">
+      <header className="relative isolate overflow-hidden bg-gradient-to-br from-[#f7d976]/25 via-[#2d0e0e] to-[#080302]">
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage:
-              "radial-gradient(circle at top, rgba(255,215,0,0.3), transparent 60%)",
+              "radial-gradient(circle at 20% -10%, rgba(247,217,118,0.45), transparent 55%), radial-gradient(circle at 80% 0%, rgba(139,0,0,0.4), transparent 60%)",
           }}
         />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6 py-24 lg:flex-row lg:items-center lg:py-32">
           <div className="flex-1 space-y-8">
             <div className="flex items-center gap-4">
               <Image
-                src="/assets/logo.png"
+                src="/assets/QER.png"
                 alt="Qerun crown logo"
-                width={88}
-                height={88}
-                className="drop-shadow-lg"
+                width={96}
+                height={96}
+                className="drop-shadow-[0_8px_20px_rgba(247,217,118,0.35)]"
                 priority
               />
-              <span className="inline-flex items-center gap-2 rounded-full border border-yellow-400/40 bg-yellow-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-yellow-200">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#f7d976]/40 bg-[#f7d976]/15 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#f9e7a9]">
                 Qerun Ecosystem
               </span>
             </div>
@@ -70,7 +70,7 @@ export default function Home() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-yellow-300"
+                  className="rounded-full bg-[#f7d976] px-5 py-2 text-sm font-semibold text-[#2d0e0e] transition hover:bg-[#f9e7a9]"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -80,7 +80,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-1">
-            <div className="rounded-3xl border border-yellow-500/30 bg-black/60 p-8 shadow-xl backdrop-blur">
+            <div className="rounded-3xl border border-[#f7d976]/30 bg-[#1a0906]/80 p-8 shadow-[0_20px_40px_rgba(0,0,0,0.4)] backdrop-blur">
               <h2 className="text-lg font-semibold text-white">Official Registry</h2>
               <p className="mt-2 text-sm text-slate-300">
                 Verified domains, contracts, and support channels. Always cross-check before signing transactions.
@@ -99,7 +99,7 @@ export default function Home() {
       </header>
 
       <main className="mx-auto max-w-6xl space-y-16 px-6 py-16">
-        <section className="grid gap-6 rounded-3xl border border-white/10 bg-black/50 p-8 backdrop-blur md:grid-cols-3">
+        <section className="grid gap-6 rounded-3xl border border-[#f7d976]/20 bg-[#1a0906]/70 p-8 backdrop-blur md:grid-cols-3">
           <h2 className="text-2xl font-semibold text-white md:col-span-1">What you can do</h2>
           <div className="md:col-span-2 space-y-6 text-sm text-slate-200">
             <p>
@@ -123,15 +123,18 @@ export default function Home() {
           </p>
           <div className="mt-6 grid gap-6 md:grid-cols-3">
             {roadmap.map((item) => (
-              <article key={item.title} className="rounded-2xl border border-yellow-500/20 bg-black/60 p-6 shadow-lg backdrop-blur">
-                <h3 className="text-lg font-semibold text-yellow-200">{item.title}</h3>
+              <article
+                key={item.title}
+                className="rounded-2xl border border-[#f7d976]/25 bg-[#1a0906]/80 p-6 shadow-[0_12px_32px_rgba(0,0,0,0.35)] backdrop-blur"
+              >
+                <h3 className="text-lg font-semibold text-[#f7d976]">{item.title}</h3>
                 <p className="mt-2 text-sm text-slate-200">{item.description}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="rounded-3xl border border-yellow-500/40 bg-yellow-500/10 p-8 text-sm text-yellow-100">
+        <section className="rounded-3xl border border-[#f7d976]/40 bg-[#f7d976]/15 p-8 text-sm text-[#fdf4c6]">
           <h2 className="text-2xl font-semibold text-white">Stay Aligned</h2>
           <p className="mt-3">
             Counterfeit domains and NFT collections exist. Verify everything through the official registry
@@ -141,27 +144,17 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-white/10 bg-black/80 py-6">
+      <footer className="border-t border-[#f7d976]/20 bg-[#0c0503]/90 py-6">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Qerun DAO — community-owned, security-first finance hub.</p>
           <div className="flex flex-wrap gap-3">
-            <Link
-              className="hover:text-yellow-300"
-              href="https://github.com/qerun/qerun"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link className="hover:text-[#f7d976]" href="https://github.com/qerun/qerun" target="_blank" rel="noreferrer">
               GitHub
             </Link>
-            <Link
-              className="hover:text-yellow-300"
-              href="https://x.com/qerun"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link className="hover:text-[#f7d976]" href="https://x.com/qerun" target="_blank" rel="noreferrer">
               X (Twitter)
             </Link>
-            <Link className="hover:text-yellow-300" href="mailto:support@qerun.com">
+            <Link className="hover:text-[#f7d976]" href="mailto:support@qerun.com">
               Contact
             </Link>
           </div>
