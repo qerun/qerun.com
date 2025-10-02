@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="crown" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="#111827" stroke="#facc15" stroke-width="6" />
+  <path
+    fill="url(#crown)"
+    d="M28 82l10-36 18 20 18-28 18 28 18-20 10 36z"
+    stroke="#fcd34d"
+    stroke-width="4"
+    stroke-linejoin="round"
+  />
+  <circle cx="64" cy="60" r="8" fill="#22c55e" stroke="#bbf7d0" stroke-width="3" />
+  <circle cx="48" cy="72" r="6" fill="#22c55e" />
+  <circle cx="80" cy="72" r="6" fill="#22c55e" />
+</svg>
