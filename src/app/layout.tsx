@@ -13,6 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/assets/favicon.png',
+    shortcut: '/assets/favicon.png',
+    apple: '/assets/favicon.png',
+  },
   title: "Qerun – Web3 Finance Hub",
   description:
     "Official portal for Qerun. Track services, treasury, governance, and verified assets in one place.",
