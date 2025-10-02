@@ -161,9 +161,6 @@ export default function Home() {
             <Link className="hover:text-[#f7d976]" href="https://x.com/qerun_" target="_blank" rel="noreferrer">
               X (Twitter)
             </Link>
-            <Link className="hover:text-[#f7d976]" href="mailto:">
-              Contact
-            </Link>
           </div>
         </div>
       </footer>
