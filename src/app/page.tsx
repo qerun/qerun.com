@@ -3,8 +3,7 @@ import Link from "next/link";
 
 const primaryLinks = [
   { label: "Documentation", href: "https://github.com/qerun/qerun/tree/dev/docs" },
-  { label: "OpenSea Collection", href: "https://opensea.io/collection/pioneer" },
-];
+  ];
 
 const officialAssets = [
   { label: "Qerun.eth", value: "qerun.eth" },
@@ -98,31 +97,6 @@ export default function Home() {
         <section className="grid gap-6 rounded-3xl border border-[#f7d976]/20 bg-[#1a0906]/70 p-8 backdrop-blur md:grid-cols-3">
           <h2 className="text-2xl font-semibold text-white md:col-span-1">What you can do</h2>
           <div className="md:col-span-2 space-y-6 text-sm text-slate-200">
-            <div className="rounded-2xl border border-[#f7d976]/25 bg-[#1a0906]/85 p-6 shadow-[0_15px_35px_rgba(0,0,0,0.45)] backdrop-blur space-y-4">
-              <h3 className="text-xl font-semibold text-[#f7d976]">Join as a Pioneer</h3>
-              <p className="text-sm text-slate-200">
-                Earn an honorary Pioneer NFT by reviewing documentation, contributing to QA, or helping the
-                community grow—or pick one up on OpenSea to jump in immediately.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  className="rounded-full bg-[#f7d976]/20 px-4 py-2 text-xs font-semibold text-[#f7d976] ring-1 ring-[#f7d976]/40 transition hover:bg-[#f7d976]/30"
-                  href="https://github.com/qerun/qerun"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Help Review Docs
-                </Link>
-                <Link
-                  className="rounded-full bg-[#f7d976] px-4 py-2 text-xs font-semibold text-[#2d0e0e] transition hover:bg-[#f9e7a9]"
-                  href="https://opensea.io/collection/qerun-token"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Get a Pioneer NFT
-                </Link>
-              </div>
-            </div>
             <p>
               Qerun is evolving into a web3 service hub where finance workflows feel familiar. Names like
               <span className="font-semibold"> yourname.qerun.bnb</span> keep interactions human, while the DAO treasury rewards
