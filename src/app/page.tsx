@@ -100,7 +100,16 @@ export default function Home() {
             <p>
               Qerun is evolving into a web3 service hub where finance workflows feel familiar. Names like
               <span className="font-semibold"> yourname.qerun.bnb</span> keep interactions human, while the DAO treasury rewards
-              participation through transparent allocation.
+              participation through transparent allocation and contributor bounties.
+            </p>
+            <p>
+              Community members can propose features, ship integrations, author playbooks, and host meetups. Every
+              verifiable contribution feeds contributor scores that steer grant unlocks, beta onboarding, and premium
+              support tiers.
+            </p>
+            <p>
+              Limited-run NFTs commemorate product milestones, certify verified partners, and unlock collectible perks—
+              use them to access beta drops, loyalty boosts, and in-person event passes across the Qerun ecosystem.
             </p>
           </div>
         </section>
