@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const primaryLinks = [
-  { label: "Token Dashboard", href: "https://dash.qerun.com" },
   { label: "Documentation", href: "https://github.com/qerun/qerun/tree/dev/docs" },
   ];
 
