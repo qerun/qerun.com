@@ -1,4 +1,5 @@
 import styles from './styles/qerunTheme.module.css'
+import Logo from './components/Logo'
 
 const primaryLinks = [
   { label: 'Token Dashboard(Testnet)', href: 'https://dash.qerun.com' },
@@ -24,11 +25,9 @@ export default function App() {
       <header className={styles.qerunHeader}>
         <div className={styles.qerunHeaderOverlay} />
         <div className={styles.qerunHeaderInner}>
-          <div className={styles.qerunFlex} style={{ flex: 1 }}>
-            <div className={styles.qerunInline}>
-              <img src="/assets/logo.png" alt="Qerun crown logo" width={96} height={96} className={styles.qerunLogoShadow} />
-              <span className={styles.qerunBadge}>Qerun Ecosystem</span>
-            </div>
+          <div className={styles.qerunFlex}>
+            <Logo />
+            <span className={styles.qerunBadge}>Qerun Ecosystem</span>
             <h1 className={styles.qerunHeroTitle}>Qerun: First steps toward a decentralized future of trust &amp; freedom.</h1>
             <p className={styles.qerunLead}>
               Move money, manage vaults, and steer the treasury from a single interface. Qerun wraps transparent smart
@@ -91,9 +90,9 @@ export default function App() {
           <p className={`${styles.qerunMarginTop2} ${styles.qerunTextSm} ${styles.qerunTextMuted}`}>
             Each milestone is driven by governance proposals. Expect iterative releases, heavy user testing, and open documentation for every upgrade.
           </p>
-          <div className={`${styles.qerunCards} ${styles.qerunMarginTop6}`}>
+          <div className={`${styles.qerunCards}`}>
             {roadmap.map((item) => (
-              <article key={item.title} className={`${styles.qerunCard} ${styles.qerunCardVH}`}>
+              <article key={item.title} className={`${styles.qerunCard} `}>
                 <div className={styles.qerunCardContent}>
                   <h3 className={`${styles.qerunGoldText} ${styles.qerunHeading}`}>{item.title}</h3>
                   <p className={`${styles.qerunTextSm} ${styles.qerunTextMuted}`}>{item.description}</p>

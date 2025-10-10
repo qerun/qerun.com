@@ -9,13 +9,12 @@ npm install
 npm run dev
 ```
 
-Visit http://localhost:3000 to preview changes. Tailwind CSS is preconfigured; page content lives in `src/app/page.tsx`.
+Visit http://localhost:5173 to preview changes. Styling comes from `src/styles/qerunTheme.module.css`; the main UI lives in `src/App.tsx` and is mounted by `src/main.tsx`.
 
 ## Deployment
 
-- Build locally: `npm run build`
-- Export static assets for IPFS/ENS: `npm run build && npx next export`
-- Deploy using Vercel or pin the static `out/` directory to IPFS and update your ENS/BNB records.
+- Build locally: `npm run build` (outputs to `dist/`)
+- Deploy: serve the `dist/` directory with any static host or pin it to IPFS and update your ENS/BNB records.
 
 ## Brand & Assets
 
