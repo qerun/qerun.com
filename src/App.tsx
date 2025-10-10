@@ -7,7 +7,6 @@ export default function App() {
       <Logo />
 
       {/* Hero and Registry side-by-side */}
-      <div className={styles.qerunLayout}>
         <section className={styles.qerunCard}>
           <span className={styles.qerunBadge}>Qerun Ecosystem</span>
           <h1 className={styles.qerunHeroTitle}>Qerun: First steps toward a decentralized future of trust &amp; freedom.</h1>
@@ -59,10 +58,8 @@ export default function App() {
             </div>
           </dl>
         </section>
-      </div>
 
       {/* What you can do */}
-      <div className={styles.qerunLayout}>
         <section className={`${styles.qerunCard} ${styles.qerunCardWide}`}>
           <h2 className={styles.qerunHeadingXl}>What you can do</h2>
           <div className={`${styles.qerunVStackLg} ${styles.qerunTextSm} ${styles.qerunTextMuted}`}>
@@ -81,10 +78,8 @@ export default function App() {
             </p>
           </div>
         </section>
-      </div>
 
       {/* Roadmap */}
-      <div className={styles.qerunLayout}>
         <section className={`${styles.qerunCard} ${styles.qerunCardWide}`}>
           <h2 className={styles.qerunHeadingXl}>Roadmap Highlights</h2>
           <p className={`${styles.qerunMarginTop2} ${styles.qerunTextSm} ${styles.qerunTextMuted}`}>
@@ -117,11 +112,9 @@ export default function App() {
             </article>
           </div>
         </section>
-      </div>
 
       {/* Footer */}
-      <div className={styles.qerunLayout}>
-        <section className={styles.qerunCard}>
+        <section className={`${styles.qerunCard}`}>
           <p>© {new Date().getFullYear()} Qerun DAO — community-owned, security-first finance hub.</p>
           <div className={styles.qerunBtnRow}>
             <a className={styles.qerunLink} href="https://github.com/qerun/qerun" target="_blank" rel="noreferrer">GitHub</a>
@@ -129,6 +122,5 @@ export default function App() {
           </div>
         </section>
       </div>
-    </div>
   )
 }
