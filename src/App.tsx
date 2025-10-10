@@ -1,72 +1,69 @@
 import styles from './styles/qerunTheme.module.css'
 import Logo from './components/Logo'
 
-const primaryLinks = [
-  { label: 'Token Dashboard(Testnet)', href: 'https://dash.qerun.com' },
-  { label: 'Documentation', href: 'https://github.com/qerun/qerun/tree/dev/docs' },
-]
-
-const officialAssets = [
-  { label: 'Qerun.eth', value: 'qerun.eth' },
-  { label: 'Qerun.bnb', value: 'qerun.bnb' },
-  { label: 'Qerun.arb', value: 'qerun.arb' },
-  { label: 'Primary Docs', value: 'docs/public' },
-]
-
-const roadmap = [
-  { title: 'MVP Launch', description: 'Core treasury, swap, and governance scaffolding go live for Pioneer members.' },
-  { title: 'Service Hub', description: 'Unified dashboard for payments, vaults, alerts, and daily finance tools.' },
-  { title: 'Public Rollout', description: 'Open registrations, mobile companions, and merchant integrations.' },
-]
-
 export default function App() {
   return (
     <div className={styles.qerunRoot}>
-      <header className={styles.qerunHeader}>
-        <div className={styles.qerunHeaderOverlay} />
-        <div className={styles.qerunHeaderInner}>
-          <div className={styles.qerunFlex}>
-            <Logo />
-            <span className={styles.qerunBadge}>Qerun Ecosystem</span>
-            <h1 className={styles.qerunHeroTitle}>Qerun: First steps toward a decentralized future of trust &amp; freedom.</h1>
-            <p className={styles.qerunLead}>
-              Move money, manage vaults, and steer the treasury from a single interface. Qerun wraps transparent smart
-              contracts in a familiar, trust-first experience where every service is community-owned.
-            </p>
-            <div className={styles.qerunBtnRow}>
-              {primaryLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className={`${styles.qerunButton} ${styles.qerunButtonRound} ${styles.qerunButtonSm}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </header>
+      <Logo />
 
-      <main className={styles.qerunMain}>
+      {/* Hero and Registry side-by-side */}
+      <div className={styles.qerunLayout}>
+        <section className={styles.qerunCard}>
+          <span className={styles.qerunBadge}>Qerun Ecosystem</span>
+          <h1 className={styles.qerunHeroTitle}>Qerun: First steps toward a decentralized future of trust &amp; freedom.</h1>
+          <p className={styles.qerunLead}>
+            Move money, manage vaults, and steer the treasury from a single interface. Qerun wraps transparent smart
+            contracts in a familiar, trust-first experience where every service is community-owned.
+          </p>
+          <div className={styles.qerunBtnRow}>
+            <a
+              href="https://dash.qerun.com"
+              className={`${styles.qerunButton} ${styles.qerunButtonRound} ${styles.qerunButtonSm}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Token Dashboard(Testnet)
+            </a>
+            <a
+              href="https://github.com/qerun/qerun/tree/dev/docs"
+              className={`${styles.qerunButton} ${styles.qerunButtonRound} ${styles.qerunButtonSm}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Documentation
+            </a>
+          </div>
+        </section>
+
         <section className={styles.qerunCard}>
           <h2 className={styles.qerunHeading}>Official Registry</h2>
           <p className={`${styles.qerunTextSm} ${styles.qerunTextMuted} ${styles.qerunMarginTop2}`}>
             Verified domains, contracts, and support channels. Always cross-check before signing transactions.
           </p>
           <dl className={styles.qerunList}>
-            {officialAssets.map((item) => (
-              <div key={item.label} className={styles.qerunListRow}>
-                <dt className={`${styles.qerunTextSemi} ${styles.qerunText}`}>{item.label}</dt>
-                <dd className={styles.qerunTextMuted}>{item.value}</dd>
-              </div>
-            ))}
+            <div className={styles.qerunListRow}>
+              <dt className={`${styles.qerunTextSemi} ${styles.qerunText}`}>Qerun.eth</dt>
+              <dd className={styles.qerunTextMuted}>qerun.eth</dd>
+            </div>
+            <div className={styles.qerunListRow}>
+              <dt className={`${styles.qerunTextSemi} ${styles.qerunText}`}>Qerun.bnb</dt>
+              <dd className={styles.qerunTextMuted}>qerun.bnb</dd>
+            </div>
+            <div className={styles.qerunListRow}>
+              <dt className={`${styles.qerunTextSemi} ${styles.qerunText}`}>Qerun.arb</dt>
+              <dd className={styles.qerunTextMuted}>qerun.arb</dd>
+            </div>
+            <div className={styles.qerunListRow}>
+              <dt className={`${styles.qerunTextSemi} ${styles.qerunText}`}>Primary Docs</dt>
+              <dd className={styles.qerunTextMuted}>docs/public</dd>
+            </div>
           </dl>
         </section>
+      </div>
 
-        <section className={styles.qerunCard}>
+      {/* What you can do */}
+      <div className={styles.qerunLayout}>
+        <section className={`${styles.qerunCard} ${styles.qerunCardWide}`}>
           <h2 className={styles.qerunHeadingXl}>What you can do</h2>
           <div className={`${styles.qerunVStackLg} ${styles.qerunTextSm} ${styles.qerunTextMuted}`}>
             <p>
@@ -84,34 +81,54 @@ export default function App() {
             </p>
           </div>
         </section>
+      </div>
 
-        <section>
+      {/* Roadmap */}
+      <div className={styles.qerunLayout}>
+        <section className={`${styles.qerunCard} ${styles.qerunCardWide}`}>
           <h2 className={styles.qerunHeadingXl}>Roadmap Highlights</h2>
           <p className={`${styles.qerunMarginTop2} ${styles.qerunTextSm} ${styles.qerunTextMuted}`}>
             Each milestone is driven by governance proposals. Expect iterative releases, heavy user testing, and open documentation for every upgrade.
           </p>
           <div className={`${styles.qerunCards}`}>
-            {roadmap.map((item) => (
-              <article key={item.title} className={`${styles.qerunCard} `}>
-                <div className={styles.qerunCardContent}>
-                  <h3 className={`${styles.qerunGoldText} ${styles.qerunHeading}`}>{item.title}</h3>
-                  <p className={`${styles.qerunTextSm} ${styles.qerunTextMuted}`}>{item.description}</p>
-                </div>
-              </article>
-            ))}
+            <article className={`${styles.qerunCard}`}>
+              <div className={styles.qerunCardContent}>
+                <h3 className={`${styles.qerunGoldText} ${styles.qerunHeading}`}>MVP Launch</h3>
+                <p className={`${styles.qerunTextSm} ${styles.qerunTextMuted}`}>
+                  Core treasury, swap, and governance scaffolding go live for Pioneer members.
+                </p>
+              </div>
+            </article>
+            <article className={`${styles.qerunCard}`}>
+              <div className={styles.qerunCardContent}>
+                <h3 className={`${styles.qerunGoldText} ${styles.qerunHeading}`}>Service Hub</h3>
+                <p className={`${styles.qerunTextSm} ${styles.qerunTextMuted}`}>
+                  Unified dashboard for payments, vaults, alerts, and daily finance tools.
+                </p>
+              </div>
+            </article>
+            <article className={`${styles.qerunCard}`}>
+              <div className={styles.qerunCardContent}>
+                <h3 className={`${styles.qerunGoldText} ${styles.qerunHeading}`}>Public Rollout</h3>
+                <p className={`${styles.qerunTextSm} ${styles.qerunTextMuted}`}>
+                  Open registrations, mobile companions, and merchant integrations.
+                </p>
+              </div>
+            </article>
           </div>
         </section>
-      </main>
+      </div>
 
-      <footer className={styles.qerunFooter}>
-        <div className={styles.qerunFooterInner}>
+      {/* Footer */}
+      <div className={styles.qerunLayout}>
+        <section className={styles.qerunCard}>
           <p>© {new Date().getFullYear()} Qerun DAO — community-owned, security-first finance hub.</p>
           <div className={styles.qerunBtnRow}>
             <a className={styles.qerunLink} href="https://github.com/qerun/qerun" target="_blank" rel="noreferrer">GitHub</a>
             <a className={styles.qerunLink} href="https://x.com/qerun_" target="_blank" rel="noreferrer">X (Twitter)</a>
           </div>
-        </div>
-      </footer>
+        </section>
+      </div>
     </div>
   )
 }
